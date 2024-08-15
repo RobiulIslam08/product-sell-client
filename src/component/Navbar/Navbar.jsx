@@ -46,7 +46,7 @@ const Navbar = () => {
 	return (
 		<div>
 		
-<div className="navbar bg-base-100">
+<div className="navbar bg-base-100 max-w-[85%] mx-auto">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -82,7 +82,7 @@ const Navbar = () => {
       <Link to="sign-in"><li className="btn md:btn-md btn-sm bg-cyan-600 hover:bg-cyan-500 text-black ">Sign In</li></Link>
     </ul>
   </div> */}
-  <div className="navbar-end z-50">
+  <div className="navbar-end ">
           {user ? (
             <div className="dropdown dropdown-end">
               <div className="w-10 h-10" tabIndex={0}>
