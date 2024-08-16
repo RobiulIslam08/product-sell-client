@@ -4,6 +4,7 @@ import ProductPage from "../pages/ProductPage/ProductPage";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import RegisterPage from "../pages/RegisterPage/RegisterPage";
 import ContactPage from "../pages/ContactPage/ContactPage";
+import PrivateRoute from "../privateRoute/PrivateRoute";
 
  const router = createBrowserRouter([
 	{
@@ -12,7 +13,7 @@ import ContactPage from "../pages/ContactPage/ContactPage";
 	  children: [
 		{
 			path: "/",
-			element: <ProductPage></ProductPage>
+			element: <PrivateRoute> <ProductPage></ProductPage></PrivateRoute>
 		},
 		{
 			path: 'sign-up',

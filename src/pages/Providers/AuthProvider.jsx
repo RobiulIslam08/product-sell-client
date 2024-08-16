@@ -51,6 +51,7 @@ const AuthProvider = ({ children }) => {
             setUser(currentUser)
             if (currentUser) {
                 saveUser(currentUser)
+                setLoading(false)
                 // get token and stored client
                 const userInfo = {
                     email: currentUser.email,

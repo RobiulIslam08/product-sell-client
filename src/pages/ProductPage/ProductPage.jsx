@@ -234,8 +234,9 @@
 // };
 
 // export default ProductPage; 
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import axios from "axios";
+
 
 const ProductPage = () => {
   const [products, setProducts] = useState([]);
@@ -248,6 +249,8 @@ const ProductPage = () => {
   const [sortBy, setSortBy] = useState("date");
   const [sortOrder, setSortOrder] = useState("desc");
   const productsPerPage = 10;
+
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
