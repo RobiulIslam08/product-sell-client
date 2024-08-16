@@ -1,8 +1,16 @@
-# React + Vite
+# PONNO
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Product Search and Filtering Frontend
 
-Currently, two official plugins are available:
+This is the frontend of a single-page application built using React.js that allows users to search, filter, and sort products. It includes authentication via Firebase and a responsive design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+
+- **Product Display**: View a list of products with pagination.
+- **Search Functionality**: Search for products by name.
+- **Filtering**: Filter products by brand, category, and price range.
+- **Sorting**: Sort products by price or date added.
+- **Authentication**: Login with Google or Email/Password using Firebase.
+- **Responsive Design**: Mobile-first design approach for all devices.
+
+
