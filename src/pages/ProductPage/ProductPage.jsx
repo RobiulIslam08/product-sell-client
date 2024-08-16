@@ -255,7 +255,7 @@ const ProductPage = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/products', {
+        const response = await axios.get('https://job-task-server-seven-theta.vercel.app/products', {
           params: {
             page: currentPage,
             limit: productsPerPage,
@@ -362,7 +362,7 @@ const ProductPage = () => {
       </div>
 
       <div className="filter-item mb-5">
-        <label className="label">Sort By</label>
+        <label className="label text-base md:text-2xl lg:text-3xl font-semibold">Sort By</label>
         <select
           className="select select-bordered w-full"
           onChange={handleSortChange}
@@ -393,7 +393,7 @@ const ProductPage = () => {
       {products?.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-16 md:gap-10 gap-4">
           {products.map((product) => (
-            <div key={product._id} className="card card-compact bg-base-300 lg:w-72 xl:w-80 md:w-60 w-52 shadow-xl">
+            <div key={product._id} className="card card-compact bg-base-300 lg:w-72 xl:w-[350px] md:w-64 w-60 shadow-xl">
               <figure>
                 <img src={product?.productImage} alt={product.productName} />
               </figure>
@@ -402,6 +402,7 @@ const ProductPage = () => {
                 <p>{product?.description}</p>
                 <p><span className="font-semibold">Brand Name:</span> {product?.brandName}</p>
                 <p><span className="font-semibold">Category:</span> {product?.category}</p>
+               
                 <div className="flex text-base">
                   <p><span className="font-semibold">Price:</span> {product?.price}$</p>
                   <p><span className="font-semibold">Ratings:</span> {product?.ratings}</p>
@@ -417,7 +418,7 @@ const ProductPage = () => {
         <p>No products found.</p>
       )}
 
-      <div className="pagination mt-10">
+      <div className="pagination mt-10 mb-10">
         <button
           className="btn mr-5 text-white bg-sky-600 hover:bg-sky-700"
           onClick={handlePreviousPage}
