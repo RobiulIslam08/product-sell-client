@@ -402,6 +402,9 @@ const ProductPage = () => {
                 <p>{product?.description}</p>
                 <p><span className="font-semibold">Brand Name:</span> {product?.brandName}</p>
                 <p><span className="font-semibold">Category:</span> {product?.category}</p>
+                <p><span className="font-semibold">Published Year:</span>   {new Date(product?.createdAt).toLocaleDateString('en-GB', {
+    year: 'numeric',
+  })}</p>
                
                 <div className="flex text-base">
                   <p><span className="font-semibold">Price:</span> {product?.price}$</p>
