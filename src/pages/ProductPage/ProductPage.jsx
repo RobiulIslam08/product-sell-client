@@ -236,6 +236,7 @@
 // export default ProductPage; 
 import  { useEffect, useState } from "react";
 import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 
 const ProductPage = () => {
@@ -305,6 +306,9 @@ const ProductPage = () => {
 
   return (
     <div>
+        <Helmet>
+        <title>Product Page</title>
+    </Helmet>
       <h1 className="text-lg my-10 md:text-3xl lg:text-4xl text-center font-bold">Our Products</h1>
 
       <div className="filters mb-10">
